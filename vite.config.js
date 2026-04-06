@@ -1,10 +1,14 @@
 ﻿import { defineConfig } from 'vite'
-import react from '@vitejs/react'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  // أضفنا هذا السطر لحل مشكلة الصفحة البيضاء
-  // تأكد أن الاسم بين علامتي / يطابق اسم المستودع تماماً
-  base: '/egypest11/', 
+  plugins: [
+    react( ),
+    tailwindcss(),
+  ],
+  // أضفنا هذا السطر لحل مشكلة الصفحة البيضاء عند الرفع على GitHub Pages
+  // الاسم بين علامتي / يطابق اسم المستودع تماماً
+  base: '/egypest11/',
 })
